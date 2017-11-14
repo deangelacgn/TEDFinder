@@ -1,0 +1,14 @@
+.github-btn {
+  color: rgb(119, 119, 119);
+}
+
+.github-btn:hover {
+  color: rgb(210, 126, 4)
+}
+
+.github-container {
+  position: absolute;
+  top: 30px;
+  right: 25px;
+  font-size: x-large;
+}

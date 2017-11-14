@@ -1,0 +1,122 @@
+{% extends "website/base.html" %}
+{% block title %} Home Page {% endblock %}
+{% block content %}
+{% load static %}
+<div class="slider-area">
+    <div class="slider">
+        <div id="bg-slider" class="owl-carousel owl-theme">
+            <div class="item"><img src="{% static 'third-party/theme/assets/img/slide1/slider-image-2.jpg' %}"></div>
+            <div class="item"><img src="{% static 'third-party/theme/assets/img/slide1/slider-image-2.jpg' %}"></div>
+            <div class="item"><img src="{% static 'third-party/theme/assets/img/slide1/slider-image-2.jpg' %}"></div>
+        </div>
+    </div>
+    <div class="slider-content">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
+                <h2>doc2vec</h2>
+                <p>Nunca foi tão fácil encontrar seus artigos preferidos.</p>
+                <div class="search-form wow pulse" data-wow-delay="0.8s">
+
+                    <form action="" class=" form-inline">
+                        <!-- <button class="btn  toggle-btn" type="button"><i class="fa fa-bars"></i></button> -->
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Key word">
+                        </div>
+                        <!-- <div class="form-group">
+                            <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Select your city">
+
+                                <option>New york, CA</option>
+                                <option>Paris</option>
+                                <option>Casablanca</option>
+                                <option>Tokyo</option>
+                                <option>Marraekch</option>
+                                <option>kyoto , shibua</option>
+                            </select>
+                        </div> -->
+
+                        <button class="btn search-btn" type="submit"><i class="fa fa-search"></i></button>
+                            <button class="btn search-btn prop-btm-sheaerch" type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Count area -->
+<div class="count-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-xs-12 percent-blocks m-main" data-waypoint-scroll="true">
+              <div class="col-md-6 col-sm-6 text-center page-title">
+                  <h2>Nosso tamanho:</h2>
+              </div>
+              <div class="col-sm-6 col-xs-6">
+                  <div class="count-item">
+                      <div class="count-item-circle">
+                          <span class="fa fa-files-o"></span>
+                      </div>
+                      <div class="chart" data-percent="5000">
+                          <h2 class="percent"  id="counter3">5000</h2>
+                          <h5>ARQUIVOS</h5>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--TESTIMONIALS -->
+<div class="testimonial-area recent-property" style="background-color: #FCFCFC; padding-bottom: 15px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
+                <!-- /.feature title -->
+                <h2>Nossa Equipe </h2>
+            </div>
+        </div>
+
+        <div class="row team" style="margin-top:3rem;">
+          <div class="col-md-10 col-md-offset-1 col-sm-12">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="item">
+                  <div class="client-face">
+                      <img src="{% static 'img/rqroz.png' %}" alt="">
+                  </div>
+                  <div class="github-container">
+                    <a class="github-btn" href="https://github.com/rqroz"  target="_blank">
+                      <span class="fa fa-github"></span>
+                    </a>
+                  </div>
+                  <div class="client-text">
+                    <h4><strong>Rodolfo Queiroz</strong></h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="item">
+                    <div class="client-face">
+                        <img src="{% static 'img/deangelacgn.png' %}" alt="">
+                    </div>
+                    <div class="github-container">
+                      <a class="github-btn" href="https://github.com/deangelacgn" target="_blank">
+                        <span class="fa fa-github"></span>
+                      </a>
+                    </div>
+                    <div class="client-text">
+                      <h4><strong>Deangela Neves</strong></h4>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
