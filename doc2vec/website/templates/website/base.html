@@ -52,34 +52,23 @@
                         <span class="icon-bar"></span>
                     </button>
                     <!-- <a class="navbar-brand" href="index.html"><img src="{% static 'third-party/theme/assets/img/logo.png' %}" alt=""></a> -->
+                    <a class="navbar-brand" href="{% url 'index_view' %}">DOC2VEC</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse yamm" id="navigation">
-                    <div class="button navbar-right">
-                        <button class="navbar-btn nav-button wow bounceInRight login" onclick=" window.open('register.html')" data-wow-delay="0.45s">Login</button>
-                    </div>
-                    <ul class="main-nav nav navbar-nav navbar-right">
-                        <li class="dropdown ymm-sw " data-wow-delay="0.1s">
-                            <a href="#" class="dropdown-toggle active" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Home <b class="caret"></b></a>
-                            <ul class="dropdown-menu navbar-nav">
-                                <li>
-                                    <a href="#index-2">Home Style 2</a>
-                                </li>
-                                <li>
-                                    <a href="#index-3">Home Style 3</a>
-                                </li>
-                                <li>
-                                    <a href="#index-4">Home Style 4</a>
-                                </li>
-                                <li>
-                                    <a href="#index-5">Home Style 5</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="wow fadeInDown" data-wow-delay="0.5s"><a href="contact.html">Contact</a></li>
-                    </ul>
+                    {% if request.user.is_authenticated %}
+                      <div class="button navbar-right">
+                          <button class="navbar-btn nav-button wow bounceInRight login" onclick="window.open('logout/', '_self')" data-wow-delay="0.45s">Logout</button>
+                      </div>
+                      <ul class="main-nav nav navbar-nav navbar-right">
+                          <li class="wow fadeInDown" data-wow-delay="0.5s"><a href="#files">Arquivos</a></li>
+                      </ul>
+                    {% else %}
+                      <div class="button navbar-right">
+                          <button class="navbar-btn nav-button wow bounceInRight login" onclick="window.open('login/', '_self')" data-wow-delay="0.45s">Login</button>
+                      </div>
+                    {% endif %}
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
@@ -123,6 +112,5 @@
         <script src="{% static 'third-party/theme/assets/js/price-range.js' %}"></script>
 
         <script src="{% static 'third-party/theme/assets/js/main.js' %}"></script>
-
     </body>
 </html>
