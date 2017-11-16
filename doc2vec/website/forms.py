@@ -2,6 +2,7 @@ from django import forms
 from django.forms.models import modelformset_factory, inlineformset_factory
 from django.forms import ValidationError, ModelForm, Form, Textarea, TextInput, CheckboxInput, DateInput
 from django.forms.widgets import ClearableFileInput
+from website.models import *
 
 class LoginForm(Form):
     username = forms.CharField(
@@ -32,3 +33,11 @@ class LoginForm(Form):
                 }
             )
         )
+
+class DocumentForm(ModelForm):
+    class Meta:
+        model = Document
+        fields = ('title', 'doc',)
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control'}),
+        }

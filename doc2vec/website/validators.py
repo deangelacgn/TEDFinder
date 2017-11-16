@@ -1,5 +1,5 @@
 from django.core.exceptions import ValidationError
-import re
+import re, os
 
 def min_length(value):
     if len(value) < 1:

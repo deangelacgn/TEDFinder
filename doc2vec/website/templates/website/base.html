@@ -59,10 +59,10 @@
                 <div class="collapse navbar-collapse yamm" id="navigation">
                     {% if request.user.is_authenticated %}
                       <div class="button navbar-right">
-                          <button class="navbar-btn nav-button wow bounceInRight login" onclick="window.open('logout/', '_self')" data-wow-delay="0.45s">Logout</button>
+                          <button id="logout-btn" class="navbar-btn nav-button wow bounceInRight login" data-wow-delay="0.45s">Logout</button>
                       </div>
                       <ul class="main-nav nav navbar-nav navbar-right">
-                          <li class="wow fadeInDown" data-wow-delay="0.5s"><a href="#files">Arquivos</a></li>
+                          <li class="wow fadeInDown" data-wow-delay="0.5s"><a href="{% url 'doc_view' %}">Arquivos</a></li>
                       </ul>
                     {% else %}
                       <div class="button navbar-right">
@@ -73,27 +73,6 @@
             </div><!-- /.container-fluid -->
         </nav>
         <!-- End of nav bar -->
-
-        {% block content %}
-        {% endblock %}
-
-
-        <!-- Footer area-->
-        <div class="footer-area">
-            <div class=" footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-offset-9 col-md-3 col-sm-offset-6 col-sm-6 wow fadeInLeft animated">
-                            <div class="single-footer">
-                                <h4>Quem somos</h4>
-                                <div class="footer-title-line"></div>
-                                <p>Dois estudantes de Engenharia de Computação, da Universidade Federal do Rio Grande do Norte, tentando passar em Inteligencia Artificial com uma nota boa.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <script src="{% static 'third-party/theme/assets/js/modernizr-2.6.2.min.js' %}"></script>
 
@@ -112,5 +91,35 @@
         <script src="{% static 'third-party/theme/assets/js/price-range.js' %}"></script>
 
         <script src="{% static 'third-party/theme/assets/js/main.js' %}"></script>
+
+        <script src="{% static 'js/csrf.js' %}"></script>
+        <script src="{% static 'js/main.js' %}?version=1.1"></script>
+        <script src="{% static 'js/bootbox.min.js' %}"></script>
+
+        {% block content %}
+        {% endblock %}
+
+        <!-- Footer area-->
+        <div class="footer-area">
+            <div class=" footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-offset-9 col-md-3 col-sm-offset-6 col-sm-6 wow fadeInLeft animated">
+                            <div class="single-footer">
+                                <h4>Quem somos</h4>
+                                <div class="footer-title-line"></div>
+                                <p>Dois estudantes de Engenharia de Computação, da Universidade Federal do Rio Grande do Norte, tentando passar em Inteligencia Artificial com uma nota boa.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+          {% if error %}
+            bootbox.alert("{{error}}");
+          {% endif %}
+        </script>
     </body>
 </html>

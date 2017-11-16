@@ -1088,12 +1088,21 @@ font-weight: 500;
 page-header
 ======================================================*/
 .page-head{
-    background: #494C53 url("../../assets/img/page-header.jpg")
-        no-repeat scroll center top / cover;
-    color:#FFF;
+    color: #FFF;
+    background: url("../../../../img/docs-page-header.jpg") no-repeat scroll center top / cover;
     position: relative;
     min-height: 140px;
 }
+
+.page-head > .container {
+    background-color: rgba(73, 76, 83, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .page-head-content {
     padding-top: 52px;
     padding-bottom: 52px;
@@ -1108,6 +1117,7 @@ page-header
 }
 .content-area{
     background-color: #FCFCFC; padding-bottom: 55px;
+    margin-top: 5rem;
 }
 .layout-switcher a{
     font-size: 25px;

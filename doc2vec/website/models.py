@@ -9,9 +9,9 @@ from website.paths import *
 
 class Document(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    title = models.CharField(max_length=200, validators=[min_length, deny_href])
-    doc = models.FileField(upload_to=url_docs, validators=[validate_file_extension])
-    date = models.DateTimeField(editable=False, default=timezone.now)
+    title = models.CharField("Título", max_length=200, validators=[min_length, deny_href])
+    doc = models.FileField("Documento", upload_to=url_docs, validators=[validate_file_extension])
+    date = models.DateTimeField("Data", editable=False, default=timezone.now)
 
     def __str__(self):
-        return str(self.id) + " | Category ID: " + str(self.category.id) + " | Title: " + self.title
+        return str(self.id) + " | Title: " + self.title

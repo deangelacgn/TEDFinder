@@ -1,0 +1,7 @@
+<div id="doc-form-container">
+  <form id="doc-form" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% include "website/forms/form_snippet.html" %}
+    <center><button id="new-doc-btn" type="Submit" class="btn btn-primary btn-xs">Enviar Documento</button></center>
+  </form>
+</div>

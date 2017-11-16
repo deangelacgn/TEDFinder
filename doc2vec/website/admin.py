@@ -1,3 +1,6 @@
 from django.contrib import admin
+from website.models import *
 
-# Register your models here.
+@admin.register(Document)
+class PostingRelation(admin.ModelAdmin):
+    search_fields = ('user__first__name', 'user__last_name', 'user__username', 'title', 'date',)

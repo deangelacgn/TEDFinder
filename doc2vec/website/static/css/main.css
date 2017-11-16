@@ -12,3 +12,16 @@
   right: 25px;
   font-size: x-large;
 }
+
+.fqa-body ul {
+  list-style: none !important;
+}
+
+.btn-xs {
+  padding: 1px 5px !important;
+  border-radius: 3px;
+}
+
+#add-doc-btn {
+  color: rgb(253, 198, 0);
+}

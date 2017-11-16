@@ -1,20 +1,10 @@
-from django.http import HttpResponse, HttpResponseRedirect, JsonResponse, Http404, HttpResponseForbidden
-from django.shortcuts import render, render_to_response, redirect, get_object_or_404
+from .modules import *
 from django.template import RequestContext
 
-from django.views import View
-from django.views.generic import ListView, DetailView
-from django.views.generic.edit import FormView, ModelFormMixin, CreateView, UpdateView, DeleteView
-from django.views.generic.list import MultipleObjectMixin
-from django.views.generic.detail import SingleObjectMixin
-
-from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 
-from website.forms import *
-
-from django.contrib.auth.decorators import user_passes_test
+from website.forms import LoginForm
 
 class IndexView(View):
     def get(self, request, *args, **kwargs):
@@ -51,7 +41,6 @@ class LogoutView(View):
     def get(self, request, *args, **kwargs):
         logout(request)
         return redirect('index_view')
-
 
 
 
