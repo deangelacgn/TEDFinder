@@ -41,3 +41,10 @@ class DocumentView(View):
         print(form.errors)
 
         return redirect('doc_view')
+
+
+@method_decorator(login_required, name='dispatch')
+class DocumentDelete(DeleteView):
+    model = Document
+    success_url = reverse_lazy('doc_view')
+    template_name = "website/docs/docs.html"

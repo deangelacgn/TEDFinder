@@ -23,11 +23,11 @@
                            <div class="panel-group">
                                <div class="panel panel-default">
                                    <div class="panel-heading">
-                                        <h4 class="panel-title fqa-title" data-toggle="collapse" data-target="#fqa11" >
+                                        <h4 class="panel-title fqa-title" data-toggle="collapse" data-target="#doc{{doc.pk}}" >
                                            {{doc.title}}
                                         </h4>
                                    </div>
-                                   <div id="fqa11" class="panel-collapse collapse fqa-body">
+                                   <div id="doc{{doc.pk}}" class="panel-collapse collapse fqa-body">
                                        <div class="panel-body">
                                            <ul>
                                                <li><strong>Enviado por:</strong>&nbsp;{{doc.user.username}}</li>
@@ -36,6 +36,9 @@
                                                  <center>
                                                    <a class="btn btn-primary btn-xs" href="{{doc.doc.url}}" target="_blank">
                                                      Visualizar
+                                                   </a>
+                                                   <a class="btn btn-danger btn-xs del-doc-btn"  data-pk="{{doc.pk}}">
+                                                     Excluir
                                                    </a>
                                                  </center>
                                                </li>

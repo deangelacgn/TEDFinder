@@ -22,4 +22,28 @@ $(function(){
           return $('#doc-form-container').html()
         }
     })
+
+    $(".del-doc-btn").each(function(){
+        var btn = $(this)
+        btn.on('click', function(event){
+          event.preventDefault()
+          bootbox.confirm({
+            message: "<b>Tem certeza que você quer excluir este documento?</b>",
+            callback: function (result) {
+              if (result){
+                deleteDoc(btn)
+              }
+            }
+          });
+        })
+    })
 });
+
+function deleteDoc(btn){
+  var pk = btn.data('pk')
+  if (pk === undefined) return
+
+  $.post('/arquivos/'+pk+'/delete/', function(){
+      window.location.reload()
+  })
+}

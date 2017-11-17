@@ -25,3 +25,16 @@
 #add-doc-btn {
   color: rgb(253, 198, 0);
 }
+
+.btn-danger {
+  color: white;
+  background: #FF3B30;
+  border-color: #FF3B30;
+  font-weight: 600;
+}
+
+.btn-danger:hover {
+  color: #FF3B30;
+  background: #282829;
+  border-color: #282829;
+}
