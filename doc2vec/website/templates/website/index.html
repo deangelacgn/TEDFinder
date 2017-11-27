@@ -18,21 +18,24 @@
             <form id="search-form" class="form-inline" method="post">
               {% csrf_token %}
               <div class="form-group">
-                  <input type="text" name="keyword" class="form-control" placeholder="Key word" required>
+                  <input type="text" name="keyword" class="form-control" placeholder="Insira sua busca aqui..." required>
               </div>
               <button class="btn search-btn" type="submit"><i class="fa fa-search"></i></button>
             </form>
           </div>
           <div id="video-container">
-            <div id="video-header">
-              <h4 id="title-container">
-                <span id="video-title"></span>
-                <a id="close-video-btn" href="#close-video">
-                  <span class="fa fa-times pull-right text-danger"></span>
-                </a>
-              </h4>
-            </div>
-            <div id="embed-video"></div>
+            <h4 id="search-info">Você pesquisou por:&nbsp;<span id="search-keys"></span></h4>
+            <center>
+              <div id="video-header">
+                <h5 id="title-container">
+                  <span id="video-title"></span>
+                  <a id="close-video-btn" href="#close-video">
+                    <span class="fa fa-times pull-right text-danger"></span>
+                  </a>
+                </h5>
+              </div>
+              <div id="embed-video"></div>
+            </center>
           </div>
         </div>
       </div>
@@ -111,5 +114,6 @@
         </div>
     </div>
 </div>
+{% include "website/wait_modal.html" %}
 <script src="{% static 'js/index.js' %}"></script>
 {% endblock %}

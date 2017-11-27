@@ -2,14 +2,29 @@
   display: none;
   max-width: 840px;
   width: 840px;
+  color: rgba(255, 165, 0, 0.71);
+  text-align: left;
+}
+
+#video-header {
+  max-width: 600px;
+  text-align: left;
 }
 
 #video-header a {
   font-size: initial;
 }
 
+#search-keys {
+  color: #777;
+}
+
+#search-info {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 #title-container {
-  text-align: left;
-  color: rgba(255, 165, 0, 0.71);
-  font-weight: 550;
+  font-weight: 500;
+  font-size: 20px;
 }
