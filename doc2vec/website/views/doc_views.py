@@ -19,7 +19,6 @@ class DocumentList(ListView):
         context = super(DocumentList, self).get_context_data(**kwargs)
         context['doc_form'] = self.doc_form
         context['doc_error'] = self.request.session.pop('doc_error', None)
-        print(context)
         return context
 
 @method_decorator(login_required, name='dispatch')
@@ -41,7 +40,6 @@ class DocumentView(View):
         print(form.errors)
 
         return redirect('doc_view')
-
 
 @method_decorator(login_required, name='dispatch')
 class DocumentDelete(DeleteView):

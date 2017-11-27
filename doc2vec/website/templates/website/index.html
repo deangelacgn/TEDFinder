@@ -2,50 +2,42 @@
 {% block title %} Home Page {% endblock %}
 {% block content %}
 {% load static %}
+<link rel="stylesheet" href="{% static '/css/index.css' %}">
 <div class="slider-area">
     <div class="slider">
-        <div id="bg-slider" class="owl-carousel owl-theme">
-            <div class="item"><img src="{% static 'third-party/theme/assets/img/slide1/slider-image-2.jpg' %}"></div>
-            <div class="item"><img src="{% static 'third-party/theme/assets/img/slide1/slider-image-2.jpg' %}"></div>
-            <div class="item"><img src="{% static 'third-party/theme/assets/img/slide1/slider-image-2.jpg' %}"></div>
-        </div>
+        <img src="{% static 'third-party/theme/assets/img/slide1/slider-image-2.jpg' %}">
     </div>
     <div class="slider-content">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
-                <h2>doc2vec</h2>
-                <p>Nunca foi tão fácil encontrar seus artigos preferidos.</p>
-                <div class="search-form wow pulse" data-wow-delay="0.8s">
-
-                    <form action="" class=" form-inline">
-                        <!-- <button class="btn  toggle-btn" type="button"><i class="fa fa-bars"></i></button> -->
-
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Key word">
-                        </div>
-                        <!-- <div class="form-group">
-                            <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Select your city">
-
-                                <option>New york, CA</option>
-                                <option>Paris</option>
-                                <option>Casablanca</option>
-                                <option>Tokyo</option>
-                                <option>Marraekch</option>
-                                <option>kyoto , shibua</option>
-                            </select>
-                        </div> -->
-
-                        <button class="btn search-btn" type="submit"><i class="fa fa-search"></i></button>
-                            <button class="btn search-btn prop-btm-sheaerch" type="submit"><i class="fa fa-search"></i></button>
-                        </div>
-
-                    </form>
-                </div>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
+          <div id="presentation-header">
+            <h2>doc2vec</h2>
+            <p>Nunca foi tão fácil encontrar seus artigos preferidos.</p>
+          </div>
+          <div class="search-form wow pulse" data-wow-delay="0.8s">
+            <form id="search-form" class="form-inline" method="post">
+              {% csrf_token %}
+              <div class="form-group">
+                  <input type="text" name="keyword" class="form-control" placeholder="Key word" required>
+              </div>
+              <button class="btn search-btn" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+          <div id="video-container">
+            <div id="video-header">
+              <h4 id="title-container">
+                <span id="video-title"></span>
+                <a id="close-video-btn" href="#close-video">
+                  <span class="fa fa-times pull-right text-danger"></span>
+                </a>
+              </h4>
             </div>
+            <div id="embed-video"></div>
+          </div>
         </div>
+      </div>
     </div>
 </div>
-
 
 <!-- Count area -->
 <div class="count-area">
@@ -119,4 +111,5 @@
         </div>
     </div>
 </div>
+<script src="{% static 'js/index.js' %}"></script>
 {% endblock %}

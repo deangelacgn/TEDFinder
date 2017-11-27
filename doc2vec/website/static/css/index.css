@@ -1,0 +1,15 @@
+#video-container {
+  display: none;
+  max-width: 840px;
+  width: 840px;
+}
+
+#video-header a {
+  font-size: initial;
+}
+
+#title-container {
+  text-align: left;
+  color: rgba(255, 165, 0, 0.71);
+  font-weight: 550;
+}
