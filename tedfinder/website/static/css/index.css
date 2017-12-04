@@ -1,0 +1,58 @@
+#video-container {
+  display: none;
+  max-width: 840px;
+  width: 840px;
+  text-align: left;
+}
+
+#video-container * {
+  color: #e62b1e;
+}
+
+#video-header {
+  max-width: 600px;
+  text-align: left;
+}
+
+#video-header a {
+  font-size: initial;
+}
+
+#search-keys {
+  color: #777;
+}
+
+#search-info {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#title-container {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.search-form .input-group .form-group {
+    width: 760px;
+    text-align: left;
+    letter-spacing: 0.5px;
+}
+
+.input-group input[type='text'] {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.input-group-btn {
+  width: 55px !important;
+}
+
+#n-btn-select {
+  height: 40px !important;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.carousel-control {
+  background: transparent !important;
+}

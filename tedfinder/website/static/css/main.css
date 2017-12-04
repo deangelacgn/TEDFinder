@@ -1,0 +1,40 @@
+.github-btn {
+  color: rgb(119, 119, 119);
+}
+
+.github-btn:hover {
+  color: rgb(210, 126, 4)
+}
+
+.github-container {
+  position: absolute;
+  top: 30px;
+  right: 25px;
+  font-size: x-large;
+}
+
+.fqa-body ul {
+  list-style: none !important;
+}
+
+.btn-xs {
+  padding: 1px 5px !important;
+  border-radius: 3px;
+}
+
+#add-doc-btn {
+  color: rgb(253, 198, 0);
+}
+
+.btn-danger {
+  color: white;
+  background: #FF3B30;
+  border-color: #FF3B30;
+  font-weight: 600;
+}
+
+.btn-danger:hover {
+  color: #FF3B30;
+  background: #282829;
+  border-color: #282829;
+}
