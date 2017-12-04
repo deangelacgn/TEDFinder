@@ -11,14 +11,38 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
           <div id="presentation-header">
-            <h2>doc2vec</h2>
-            <p>Nunca foi tão fácil encontrar seus artigos preferidos.</p>
+            <h2>TEDFinder</h2>
+            <p>Nunca foi tão fácil encontrar suas palestras preferidas.</p>
           </div>
           <div class="search-form wow pulse" data-wow-delay="0.8s">
             <form id="search-form" class="form-inline" method="post">
               {% csrf_token %}
               <div class="form-group">
-                  <input type="text" name="keyword" class="form-control" placeholder="Insira sua busca aqui..." required>
+                  <!-- <input type="text" name="keyword" class="form-control" placeholder="Insira sua busca aqui..." required> -->
+                  <div class="input-group col-md-12">
+                    <input type="text" name="keyword" class="form-control" placeholder="Insira sua busca aqui..." required>
+                    <div class="input-group-btn">
+                      <button id="n-btn-select" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        1
+                      </button>
+                      <ul id="select-min-videos" class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#list-1" data-video="1">1</a></li>
+                        <li><a href="#list-2" data-video="2">2</a></li>
+                        <li><a href="#list-3" data-video="3">3</a></li>
+                        <li><a href="#list-4" data-video="4">4</a></li>
+                        <li><a href="#list-5" data-video="5">5</a></li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+              <div class="form-group hidden">
+                <select name="min-videos" class="form-control">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
               </div>
               <button class="btn search-btn" type="submit"><i class="fa fa-search"></i></button>
             </form>
@@ -57,7 +81,7 @@
                       </div>
                       <div class="chart" data-percent="5000">
                           <h2 class="percent"  id="counter3">5000</h2>
-                          <h5>ARQUIVOS</h5>
+                          <h5>PALESTRAS</h5>
                       </div>
                   </div>
               </div>
@@ -115,5 +139,5 @@
     </div>
 </div>
 {% include "website/wait_modal.html" %}
-<script src="{% static 'js/index.js' %}"></script>
+<script src="{% static 'js/index.js' %}?version=1.0"></script>
 {% endblock %}

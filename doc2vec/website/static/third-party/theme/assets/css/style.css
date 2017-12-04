@@ -298,15 +298,15 @@ input[type="search"]::-webkit-search-decoration {
 .btn-default {
     border-radius: 1px;
     padding: 10px 20px;
-    border: 1px solid #FDC600;
+    border: 1px solid #e62b1e;
     color: #000;
-    background-color: #FDC600;
+    background-color: #e62b1e;
     border-color: #F0F0F0;
     font-weight: 600;
 }
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
     color: #000;
-    background-color: #FDC600;
+    background-color: #e62b1e;
     border-color: #F0F0F0;
     font-weight: 600;
 }
@@ -439,7 +439,7 @@ input[type="search"]::-webkit-search-decoration {
     border-left: 0 none;
 }
 .search-btn ,.toggle-btn{
-    background-color: #FDC600;
+    background-color: #e62b1e;
     color: #333;
     font-size: 16px;
     border: 1px solid #EAE9E9;
@@ -577,8 +577,8 @@ label small{
     width: 100%;
 }
 .input-group-btn .btn{
-    background-color: #FFC500;
-    border-color: #FFC500;
+    background-color: #e62b1e;
+    border-color: #e62b1e;
     border-radius: 0px;
     height: 44px;
     color: #FFF;
@@ -636,8 +636,8 @@ label small{
     color: #FDC600;
 }
 .nav-pills.ct-red > li > a {
-    border: 1px solid #FF3B30;
-    color: #FF3B30;
+    border: 1px solid #e62b1e;
+    color: #e62b1e;
 }
 
 .nav-pills > li.active > a,
@@ -756,11 +756,11 @@ label small{
     transition: all 0.4s ease;
 }
 .nav-button.login{
-    background-color: #FDC600;
+    background-color: #e62b1e;
     margin-right: 5px;
 }
 .nav-button:hover{
-    background-color: #FDC600;
+    background-color: #e62b1e;
 
 }
 .navbar{
@@ -1025,8 +1025,9 @@ label small{
 .slider-content h2 {
     font-size: 40px;
     margin-bottom: 20px;
-    text-transform: uppercase;color: rgba(255, 165, 0, 0.71);
-font-weight: 500;
+    /*text-transform: uppercase;*/
+    color: #e62b1e;
+    font-weight: 500;
 }
 .slider-content p {
     font-size: 14px;
@@ -1134,7 +1135,7 @@ page-header
     text-align: right;
 }
 .search-widget fieldset .largesearch-btn{
-    background-color: #FDC600;
+    background-color: #e62b1e;
     font-size: 16px;
     border: 1px solid #EAE9E9;
     width: 100%;
@@ -2328,8 +2329,8 @@ count-area
     padding: 2px 15px;
     text-transform: uppercase;
     margin: 0px;
-    border-left: 2px solid #FDC600;
-    border-right: 2px solid #FDC600;
+    border-left: 2px solid #e62b1e;
+    border-right: 2px solid #e62b1e;
     display: inline-block;
 }
 .boy-sale-area {
@@ -2826,7 +2827,7 @@ padding-top: 7px;
 .footer-title-line {
     width: 100px;
     height: 2px;
-    background: #FFA600;
+    background: #e62b1e;
     margin: 0px 0px 33px;
     position: relative;
     top: -2px;

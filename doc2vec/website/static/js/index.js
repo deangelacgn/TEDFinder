@@ -33,7 +33,23 @@ function closeWait(){
   $("#wait-modal").modal('hide');
 }
 
+
+function selectMinVideosClicked(event){
+  event.preventDefault();
+  numberOfVideos = $(this).data('video');
+  $("#n-btn-select").html(numberOfVideos);
+  $("select[name='min-videos']").val(numberOfVideos);
+}
+
 $(function(){
+  $("#select-min-videos a").on('click', selectMinVideosClicked);
+
+  // $("select[name='min-videos']").on('change', function(event){
+  //   event.preventDefault();
+  //   alert('here');
+  //   selectMinVideosClicked(event);
+  // });
+
   $("#search-form").submit(function(event){
     event.preventDefault();
     openWait();
