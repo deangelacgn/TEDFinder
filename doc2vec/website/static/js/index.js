@@ -8,10 +8,20 @@ function createVideoHtml(video_url){
   return htmlToAppend;
 }
 
-function showVideo(keys, title, videoHtml){
+function showVideos(keys, videos){
+  console.log("videos: " + videos)
+  var i, videosHtml = "";
+  console.log("lenght: " + videos.length)
+  for(i=0;i<videos.length;i++){
+    var activeStr = "";
+    if(i==0){
+      activeStr = " active"
+    }
+    videosHtml += '<div class="item'+activeStr+'">' + createVideoHtml(videos[i]) + '</div>';
+  }
+
   $("#search-keys").text('"'+keys+'"');
-  $("#video-title").text(title);
-  $("#embed-video").html(video_html);
+  $("#carousel-example-generic .carousel-inner").html(videosHtml);
   $(".slider-content").css({top: "9%"});
   $("#presentation-header").slideUp(300);
   $("#video-container").slideDown(300);
@@ -44,12 +54,6 @@ function selectMinVideosClicked(event){
 $(function(){
   $("#select-min-videos a").on('click', selectMinVideosClicked);
 
-  // $("select[name='min-videos']").on('change', function(event){
-  //   event.preventDefault();
-  //   alert('here');
-  //   selectMinVideosClicked(event);
-  // });
-
   $("#search-form").submit(function(event){
     event.preventDefault();
     openWait();
@@ -61,10 +65,9 @@ $(function(){
     btn.attr('disabled', true);
 
     $.post('/pesquisa/', $(this).serialize(), function(result){
-      if(result.video !== undefined){
+      if(result.videos !== undefined){
         input.val("");
-        video_html = createVideoHtml(result.video);
-        showVideo(keywords, "Melhor palestra encontrada:", video_html);
+        showVideos(keywords, result.videos);
       }else{
         bootbox.alert('Houve um erro ao processar sua pesquisa...')
       }
@@ -80,4 +83,8 @@ $(function(){
     event.preventDefault();
     discardVideo();
   })
-})
+
+  $("#carousel-example-generic").carousel({
+    interval: false
+  });
+});

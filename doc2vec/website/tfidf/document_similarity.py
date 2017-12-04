@@ -7,7 +7,6 @@ from sklearn.feature_extraction import text
 from sklearn.feature_extraction.text import TfidfTransformer
 from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import TfidfVectorizer
-from collections import deque
 
 def read_data(path):
 	ted_data = pd.read_csv(path)
@@ -19,14 +18,16 @@ def tf_idf(keys, dataframe, label, min_videos=1):
 
 	query = tfidf_vectorizer.transform([keys])
 	cs = cosine_similarity(query, tfidf_matrix)
-	# deque_list = deque(cs)
+	similarity_list = cs[0]
+	result_list = []
+	while min_videos > 0:
+		tmp_index = np.argmax(similarity_list)
+		result_list.append(tmp_index)
+		similarity_list[tmp_index] = 0
+		min_videos -= 1
 
-	# return_list = []
-	# while len(deque_list) > 0 and min_videos > 0:
-	# 	return_list += np.argmax(deque_list.popleft())
-	# 	min_videos -= 1
-
-	return np.argmax(cs[0])
+	print("result_list: %s"%result_list)
+	return result_list
 
 #tfidf_vectorizer = TfidfVectorizer()
 #tfidf_matrix = tfidf_vectorizer.fit_transform(documents)
