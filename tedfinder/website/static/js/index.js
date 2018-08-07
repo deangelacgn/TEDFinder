@@ -22,14 +22,14 @@ function showVideos(keys, videos){
 
   $("#search-keys").text('"'+keys+'"');
   $("#carousel-example-generic .carousel-inner").html(videosHtml);
-  $(".slider-content").css({top: "9%"});
+  $(".slider-content").css({top: "20%"});
   $("#presentation-header").slideUp(300);
   $("#video-container").slideDown(300);
 }
 
 function discardVideo(){
   $("#embed-video").html("");
-  $(".slider-content").css({top: "20%"});
+  $(".slider-content").css({top: "50%"});
   $("#presentation-header").slideDown(300);
   $("#video-container").slideUp(300);
 }
@@ -83,6 +83,8 @@ $(function(){
     event.preventDefault();
     discardVideo();
   })
+
+  $('[data-toggle="popover"]').popover()
 
   $("#carousel-example-generic").carousel({
     interval: false

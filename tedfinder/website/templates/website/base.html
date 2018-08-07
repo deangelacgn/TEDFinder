@@ -54,22 +54,6 @@
                     <!-- <a class="navbar-brand" href="index.html"><img src="{% static 'third-party/theme/assets/img/logo.png' %}" alt=""></a> -->
                     <a class="navbar-brand" href="{% url 'index_view' %}">TEDFinder</a>
                 </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse yamm" id="navigation">
-                    {% if request.user.is_authenticated %}
-                      <div class="button navbar-right">
-                          <button id="logout-btn" class="navbar-btn nav-button wow bounceInRight login" data-wow-delay="0.45s">Logout</button>
-                      </div>
-                      <ul class="main-nav nav navbar-nav navbar-right">
-                          <li class="wow fadeInDown" data-wow-delay="0.5s"><a href="{% url 'doc_view' %}">Arquivos</a></li>
-                      </ul>
-                    {% else %}
-                      <div class="button navbar-right">
-                          <button class="navbar-btn nav-button wow bounceInRight login" onclick="window.open('login/', '_self')" data-wow-delay="0.45s">Login</button>
-                      </div>
-                    {% endif %}
-                </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
         <!-- End of nav bar -->

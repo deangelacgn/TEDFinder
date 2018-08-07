@@ -311,12 +311,6 @@ input[type="search"]::-webkit-search-decoration {
     font-weight: 600;
 }
 .search-form {
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 20px 0;
-    border: 1px solid #E6E6E6;
-    box-sizing: border-box;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 9;
 }
@@ -325,9 +319,8 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 .form-inline .form-control, .form-inline .form-control {
-    background: rgba(252, 252, 252, 0.35);
     border-radius: 1px;
-    color: #ADADAD;
+    color: #444444;
     height: 40px;
     margin-right: 10px;
     width: 195px;
@@ -765,7 +758,6 @@ label small{
 }
 .navbar{
     margin-bottom: 0px;
-    min-height: 100px;
 }
 .navbar-default {
     background-image: none;
@@ -774,9 +766,7 @@ label small{
     border-radius: 4px;
     box-shadow: none;
 }
-.navbar .container{
-    padding-top: 15px
-}
+
 .navbar-default {
     background-image: none;
     background-color: #FFF;
@@ -1016,18 +1006,17 @@ label small{
 }
 
 .slider-content{
-    position: absolute;
-    top: 20%;
-    text-align: center;
-    color: #FFF;
-    width: 100%;
+  position: absolute;
+  top: 50%;
+  margin-top: -76px;
+  text-align: center;
+  color: #FFF;
+  width: 100%;
 }
 .slider-content h2 {
     font-size: 40px;
     margin-bottom: 20px;
-    /*text-transform: uppercase;*/
-    color: #e62b1e;
-    font-weight: 500;
+    font-weight: 400;
 }
 .slider-content p {
     font-size: 14px;
@@ -2465,7 +2454,7 @@ count-area
     padding: 15px;
 }
 .search-form .form-inline .form-group {
-    width: 760px;
+    width: 450px;
     text-align: left;
     letter-spacing: 0.5px;
 }
@@ -2782,11 +2771,11 @@ padding-bottom: 15px;
 .footer-area{
 border-top: 1px solid #D1D1D1;
 background: #555 url("../../assets/img/bg-footer.jpg") repeat scroll 0% 0%;
-color: #535353;
+color: #fff;
 }
 .footer{
 padding: 0px 0px 10px;
-background: rgba(255, 255, 255, 0.89) none repeat scroll 0% 0%;
+background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0%;
 }
 .footer ul li i {
     padding-right: 10px;
@@ -2811,7 +2800,6 @@ padding-top: 7px;
     padding-bottom: 20px;
 }
 .footer h4{
-    color: #717171;
     font-weight: 400;
     margin-top: 0px;
     font-size: 20px;

@@ -3,22 +3,25 @@
 {% block content %}
 {% load static %}
 <link rel="stylesheet" href="{% static '/css/index.css' %}?version=1.1">
-<div class="slider-area">
-    <div class="slider">
-        <img src="{% static 'third-party/theme/assets/img/slide1/slider-image-2.jpg' %}">
-    </div>
+<div class="slider-area"  style="background-image: url('/static/img/ted1.jpg')">
+  <div class="black-view">
     <div class="slider-content">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
           <div id="presentation-header">
-            <h2>TEDFinder</h2>
-            <p>Nunca foi tão fácil encontrar suas palestras preferidas.</p>
+            <h2>
+              TEDFinder
+              <a id="help-btn" href="#help" tabindex="0" data-toggle="popover" data-placement="right" data-trigger="focus" role="button"
+              data-title="TED Finder"
+              data-content="Esta aplicação tenta encontrar palestras do TED que melhor se adequam à sua pesquisa. Ela utiliza técnicas de similaridade de documentos, como TF-IDF, como critério de busca.">
+              <i class="fa fa-question-circle"></i>
+              </a>
+            </h2>
           </div>
           <div class="search-form wow pulse" data-wow-delay="0.8s">
             <form id="search-form" class="form-inline" method="post">
               {% csrf_token %}
               <div class="form-group">
-                  <!-- <input type="text" name="keyword" class="form-control" placeholder="Insira sua busca aqui..." required> -->
                   <div class="input-group col-md-12">
                     <input type="text" name="keyword" class="form-control" placeholder="Insira sua busca aqui..." required>
                     <div class="input-group-btn">
@@ -46,6 +49,7 @@
               </div>
               <button class="btn search-btn" type="submit"><i class="fa fa-search"></i></button>
             </form>
+            <span>Temos mais de 2 mil palestras esperando por você!</span>
           </div>
           <div id="video-container">
             <h4 id="search-info">Você pesquisou por:&nbsp;<span id="search-keys"></span>
@@ -74,6 +78,7 @@
         </div>
       </div>
     </div>
+  </div>
 </div>
 
 <!-- Count area -->
@@ -149,5 +154,5 @@
     </div>
 </div>
 {% include "website/wait_modal.html" %}
-<script src="{% static 'js/index.js' %}?version=1.0"></script>
+<script src="{% static 'js/index.js' %}?version=1.1"></script>
 {% endblock %}
