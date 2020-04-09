@@ -1,4 +1,10 @@
-django==2.2.10
-scikit-learn==0.18.1
-numpy==1.13.3
+Django==2.0.1
 nltk==3.4.5
+numpy==1.13.3
+pandas==0.25.3
+python-dateutil==2.8.1
+pytz==2019.3
+scikit-learn==0.18.1
+scipy==1.2.1
+six==1.14.0
+sqlparse==0.3.1
