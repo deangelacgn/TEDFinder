@@ -1,4 +1,4 @@
-django==2.0.12
+django==2.2.10
 scikit-learn==0.18.1
 numpy==1.13.3
 nltk==3.4.5
