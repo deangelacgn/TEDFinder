@@ -1,6 +1,6 @@
 Django==2.0.1
 nltk==3.4.5
-numpy==1.13.3
+numpy==1.22.0
 pandas==0.25.3
 python-dateutil==2.8.1
 pytz==2019.3
